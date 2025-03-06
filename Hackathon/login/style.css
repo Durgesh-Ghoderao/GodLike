@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Use Poppins as the default font */
+}
+
+/* Body Styling */
+body {
+    background-color: azure;
+    color: #333; /* Default text color */
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+}
+.navbar .logo {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the logo and name */
+    gap: 10px;
+}
+.navbar .logo img {
+    height: 40px;
+}
+.navbar .logo h1 {
+    color: white;
+    margin: 0%;
+    font-size: 24px;
+    font-weight: 600;
+}
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    position: relative;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.navbar .dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    display: block;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar .dropdown-content li a:hover {
+    background-color: #444;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* User Info and Search */
+.navbar .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .search-input {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    outline: none; /* Remove default outline */
+}
+
+.navbar .avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image fits well */
+}
+
+/* Main Content */
+main {
+    text-align: center;
+}
+
+main img {
+    width: 200px;
+    height: auto;
+}
+
+/* Main Section with Gradient Background */
+.main {
+    width: 100vw;
+    min-height: 91vh; /* Adjusted to full viewport height */
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #8a2be2, #ffbc3a);
+    color: black; /* Text color for contrast */
+    font-family: 'Poppins', sans-serif; /* Consistent font */
+    box-sizing: border-box;
+}
+
+/* Inner Container */
+.inner {
+    width: 40vw;
+    background-color: #ffffff;
+    padding: 30px 80px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -0.7px rgba(0, 0, 0, 0.4);
+}
+
+.inner .ida {
+    text-align: inherit;
+    font-size: 32px; /* 30px */
+    font-weight: 400;
+}
+
+.inner .idaa {
+    font-size: 18px; /* 30px */
+    font-weight: 400;
+}
+
+#connectWalletButton, .btn {
+    padding: 10px 30px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    margin: auto;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, #8a2be2, #ffbc3a);
+    margin-top: 4rem;
+    cursor: pointer;
+    border-radius: 8px; /* Added for rounded corners */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#connectWalletButton:hover {
+    background: linear-gradient(135deg, #cc53e4, #ffed4f);
+}
+
+#disconnectWalletButton, .btn {
+    padding: 10px 30px;
+    font-size: 8px;
+    display: block;
+    margin: auto;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, #8a2be2, #ffbc3a);
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 8px; /* Added for rounded corners */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#disconnectWalletButton:hover {
+    background: linear-gradient(135deg, #cc53e4, #ffed4f);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 10px;
+        display: none; /* Hide the menu initially */
+    }
+
+    .navbar nav ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .navbar .user-info {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .inner {
+        width: 80vw;
+        padding: 20px;
+    }
+
+    .inner .ida {
+        font-size: 24px;
+    }
+
+    .inner .idaa {
+        font-size: 16px;
+    }
+
+    #connectWalletButton, #disconnectWalletButton {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo h1 {
+        font-size: 20px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 14px;
+    }
+
+    .inner {
+        width: 90vw;
+        padding: 15px;
+    }
+
+    .inner .ida {
+        font-size: 20px;
+    }
+
+    .inner .idaa {
+        font-size: 14px;
+    }
+
+    #connectWalletButton, #disconnectWalletButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Resume Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Menu Bar -->  
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" height="40">
+            <h1 class="name">CertTrust</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features\features.html">Features</a></li>
+                <li class="dropdown">
+                    <a href="#">Projects <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://solodocs.getsolo.tech/introduction">Solo documentaion</a></li>
+                        <li><a href="#">Blocks</a></li>
+                        <li><a href="#">UI Kit</a></li>
+                        <li><hr></li>
+                        <li><a href="#">Apollo</a></li>
+                        <li><a href="#">Ultima</a></li>
+                    </ul>
+                </li>
+                <li><a>About Us</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <input type="text" placeholder="Search" class="search-input">
+            <img src="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" alt="Avatar" class="avatar">
+        </div>
+    </div>
+
+    <main>
+        <div class="main">
+            <div class="inner">
+                <h1 class="ida">Welcome to CertTrust</h1>
+                <p class="idaa">Securely verify your resume using blockchain technology.</p>
+                
+                <!-- Instruction -->
+                <p class="instruction">Please select your role to continue:</p>
+                
+                <!-- Role Selection -->
+                <div class="role-selection">
+                    <label>
+                        <input type="radio" name="userRole" value="jobSeeker"> Job Seeker
+                    </label>
+                    <label>
+                        <input type="radio" name="userRole" value="recruiter"> Recruiter
+                    </label>
+                </div>
+                
+                <button id="connectWalletButton">Connect Wallet</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
